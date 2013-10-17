@@ -49,7 +49,10 @@ void cache<T>::move_position(int pos)
 template <class T>
 T cache<T>::get_value() const
 {
-	return _data[_position];	
+	if (_insertion == -1)
+		return T();
+	else
+		return _data[_position];	
 }
 
 int main()
