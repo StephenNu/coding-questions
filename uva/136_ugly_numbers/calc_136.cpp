@@ -7,15 +7,16 @@ using namespace std;
 
 int main()
 {
-	vector<long long> a;
-	for (int i = 0; i < 12; ++i)
+	vector<unsigned long long> a;
+	for (int i = 0; i < 100; ++i)
 	{
-		for (int j = 0; j < 12; ++j)
+		for (int j = 0; j < 100; ++j)
 		{
-			for (int k = 0; k < 12; ++k)
+			for (int k = 0; k < 100; ++k)
 			{
 				long long b= pow(2,k)*pow(3,j)*pow(5,i);
-				a.push_back(b);
+				if (b > 0)
+					a.push_back(b);
 			}
 		}
 	}
